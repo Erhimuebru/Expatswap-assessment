@@ -56,12 +56,11 @@ export class UserController {
     }
 
     if (createUserDto.password !== createUserDto.confirmPassword) {
-      this.logger.error('Password and confirmPassword do not match');
+      this.logger.error('Password and confirmPassword does not match');
       throw new BadRequestException(
-        'Password and confirmPassword do not match',
+        'Password and confirmPassword does not match',
       );
     }
-
     const hashedPassword = await bcrypt.hash(createUserDto.password, 15);
     const createdUser = await this.userService.createUser({
       lastName: createUserDto.lastName,
@@ -85,6 +84,14 @@ async confirmUser(@Param('userId') userId: string, @Param('token') token: string
   } catch (error) {
     return 'Invalid token or user not found';
   }
+}
+
+
+
+@Get('all')
+async getAllUsers() {
+  const users = await this.userService.getUsers();
+  return users; 
 }
 
 }

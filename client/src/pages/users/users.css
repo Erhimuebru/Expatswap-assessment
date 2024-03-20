@@ -1,0 +1,50 @@
+
+.paginationBttns{
+    width:60% ;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+    margin-top: 2rem;
+
+  }
+  
+  .paginationBttns a {
+
+    padding: 5px;
+    margin:8px;
+    border-radius: 5px;
+    cursor: pointer
+  }
+
+
+  .paginationActive {
+    background-color: #00889a;
+    color: white;
+    border-radius: 5px;
+  }
+  
+
+.Prev {
+    padding: 5px;
+    margin:8px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #00889a;
+    color: white;
+    border-radius: 5px;
+  }
+
+.Next{
+    background-color: #00889a;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin:8px;
+    border-radius: 5px;
+    cursor: pointer
+  }

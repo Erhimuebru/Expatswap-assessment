@@ -169,6 +169,33 @@ import { JwtService } from '@nestjs/jwt';
       return result;
     }
 
+
+
+
+    async getUsers() {
+        try {
+          const users = await this.userModel
+            .find({}, 'firstName lastName dob email phoneNumber createdAt')
+            .sort({ createdAt: -1 })
+            .lean()
+    
+            .exec();
+    
+          return users.map((usersCard) => ({
+            id: usersCard._id,
+            firstName: usersCard.firstName,
+            lastName: usersCard.lastName,
+            dob: usersCard.dob,
+            email: usersCard.email,
+           phoneNumber: usersCard.phoneNumber,
+            createdAt: usersCard.createdAt,
+           
+          }));
+        } catch (error) {
+          console.error('Error fetching Post cards:', error);
+          throw error;
+        }
+      }
  
   }
 
