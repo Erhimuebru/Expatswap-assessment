@@ -41,6 +41,12 @@ const Users = () => {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = filteredUsers.slice(indexOfFirstPost, indexOfLastPost);
 
+
+    const handleClearFilters = () => {
+        setStartDOB('');
+        setEndDOB('');
+    };
+
     if (loading) {
         return <div className="-mt-44"><Loading/></div>;
     }
@@ -73,9 +79,29 @@ const Users = () => {
                         />
                     </div>
                 </div>
+                {startDOB || endDOB ? (
+                    <>
+                    <div className="flex items-center justify-center">
+                        <div>
+                        <p className="text-center ">Number of users found: {filteredUsers.length}</p>
+                        <button
+                            type="button"
+                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ml-6 mt-2 rounded"
+                            onClick={handleClearFilters}
+                        >
+                            Clear Results
+                        </button>
+                        </div>
+                  
+                    </div> 
+                   
+                  
+                    </>
+                   
+                ) : null}
                 {currentPosts.length > 0 ? (
                     <div>
-                        <p className="text-center">Number of users found: {filteredUsers.length}</p>
+                  
                         <table className="min-w-full divide-y divide-gray-200 mt-5">
                             <thead className="bg-gray-50 ">
                                 <tr>
