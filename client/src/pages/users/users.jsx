@@ -193,7 +193,7 @@ const Users = () => {
           </p>
         )}
       </div>
-      <div className="mt-8 mb-2">
+      <div className="">
         <ReactPaginate
           pageCount={Math.ceil(filteredUsers.length / postsPerPage)}
           pageRangeDisplayed={2}
