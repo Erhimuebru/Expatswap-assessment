@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
 import './App.css'
 import SignUp from './pages/signup/signup';
@@ -19,9 +18,7 @@ function App() {
 
      <Routes>
                <Route path="/" element={<SignUp/>}/> 
-               <Route path="/users" element={<Users/>}/> 
-
-             
+               <Route path="/users" element={<Users/>}/>            
        </Routes>
 <Footer/>
     </>

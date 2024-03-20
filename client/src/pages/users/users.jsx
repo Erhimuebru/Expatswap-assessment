@@ -48,63 +48,62 @@ const Users = () => {
     return (
         <div className="items-center justify-center">
             <div className="mt-8 ml-6 mr-6">
-
-             
-                    <p className="text-gray-500 capitalize mb-5">Select range of date of birth</p>
-
-                    <div className="flex gap-4">
-                <div className="mb-4">
-                    <label htmlFor="startDOB" className="block font-semibold text-gray-800 text-sm">Start Date of Birth</label>
-                    <input
-                        type="date"
-                        id="startDOB"
-                        name='startDOB'
-                        className="mt-1 p-2 border rounded w-44"
-                        value={startDOB}
-                        onChange={(e) => setStartDOB(e.target.value)}
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="endDOB" className="block font-semibold text-gray-800 text-sm">End Date of Birth</label>
-                    <input
-                        type="date"
-                        id="endDOB"
-                        name='endDOB'
-                        className="mt-1 p-2 border rounded w-44"
-                        value={endDOB}
-                        onChange={(e) => setEndDOB(e.target.value)}
-                    />
-                </div>
-
+                <p className="text-gray-500 capitalize mb-5">Select range of date of birth</p>
+                <div className="flex gap-4">
+                    <div className="mb-4">
+                        <label htmlFor="startDOB" className="block font-semibold text-gray-800 text-sm">Start Date of Birth</label>
+                        <input
+                            type="date"
+                            id="startDOB"
+                            name='startDOB'
+                            className="mt-1 p-2 border rounded w-44"
+                            value={startDOB}
+                            onChange={(e) => setStartDOB(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="endDOB" className="block font-semibold text-gray-800 text-sm">End Date of Birth</label>
+                        <input
+                            type="date"
+                            id="endDOB"
+                            name='endDOB'
+                            className="mt-1 p-2 border rounded w-44"
+                            value={endDOB}
+                            onChange={(e) => setEndDOB(e.target.value)}
+                        />
+                    </div>
                 </div>
                 {currentPosts.length > 0 ? (
-                <table className="min-w-full divide-y divide-gray-200 mt-5">
-                    <thead className="bg-gray-50 ">
-                        <tr>
-                            <th scope="col" className="px-6 py-6 text-left whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">S/N</th>
-                            <th scope="col" className="px-6 py-3 text-center whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">First Name</th>
-                            <th scope="col" className="px-6 py-3 text-center whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">Last Name</th>
-                            <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                            <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Phone Number</th>
-                            <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Date of Birth</th>
-                        </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                        {currentPosts.map((category, index) => (
-                            <tr key={index}>
-                                <td className="px-6 mt-2 py-4 border">{index + 1}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{category.firstName}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{category.lastName}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{category.email}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-xs text-center border">{category.phoneNumber}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-xs text-center border">{category.dob}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-                  ) : (
+                    <div>
+                        <p className="text-center">Number of users found: {filteredUsers.length}</p>
+                        <table className="min-w-full divide-y divide-gray-200 mt-5">
+                            <thead className="bg-gray-50 ">
+                                <tr>
+                                    <th scope="col" className="px-6 py-6 text-left whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">S/N</th>
+                                    <th scope="col" className="px-6 py-3 text-center whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">First Name</th>
+                                    <th scope="col" className="px-6 py-3 text-center whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">Last Name</th>
+                                    <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                                    <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Phone Number</th>
+                                    <th scope="col" className="px-6 py-3 text-center text-xs whitespace-nowrap font-medium text-gray-500 uppercase tracking-wider">Date of Birth</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-white divide-y divide-gray-200">
+                                {currentPosts.map((user, index) => (
+                                    <tr key={index}>
+                                        <td className="px-6 mt-2 py-4 border">{index + 1}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{user.firstName}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{user.lastName}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-xs text-center border capitalize">{user.email}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-xs text-center border">{user.phoneNumber}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-xs text-center border">{user.dob}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : (
                     <p className="text-center text-red-500 mt-20">No users found based on the specified date of birth range.</p>
-                )} 
+                )}
             </div>
             <div className="mt-8 mb-2">
                 <ReactPaginate
