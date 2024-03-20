@@ -170,7 +170,7 @@ const SignUp = () => {
     }
 
     if (!data.dob) {
-      errors.dob = "dob is required";
+      errors.dob = "D.O.B is required";
     } else {
       delete errors.dob;
     }
@@ -329,7 +329,7 @@ const SignUp = () => {
                 required
               />
               {errors && errors.email && (
-                <p className="text-red-500">{errors.email}</p>
+                <p className="text-red-500 text-xs">{errors.email}</p>
               )}
               {formData.email && !isValidEmail(formData.email) && (
                 <p className="text-red-500 text-xs">Invalid email address</p>
