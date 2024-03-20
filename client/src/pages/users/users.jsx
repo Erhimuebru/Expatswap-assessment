@@ -62,11 +62,12 @@ const Users = () => {
 
   return (
     <div className="items-center justify-center">
+
       <div className="mt-6 ml-6 mr-6">
         <p className="text-gray-500 capitalize mb-3">
           Select range of date of birth
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-1">
           <div className="mb-4">
             <label
               htmlFor="startDOB"
@@ -119,7 +120,7 @@ const Users = () => {
           </>
         ) : null}
         {currentPosts.length > 0 ? (
-          <div>
+         <div className="overflow-x-auto overflow-y-auto">
             <table className="min-w-full divide-y divide-gray-200 mt-3">
               <thead className="bg-gray-50 ">
                 <tr>
