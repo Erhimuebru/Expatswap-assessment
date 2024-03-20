@@ -53,8 +53,8 @@ const Users = () => {
 
     return (
         <div className="items-center justify-center">
-            <div className="mt-8 ml-6 mr-6">
-                <p className="text-gray-500 capitalize mb-5">Select range of date of birth</p>
+            <div className="mt-6 ml-6 mr-6">
+                <p className="text-gray-500 capitalize mb-3">Select range of date of birth</p>
                 <div className="flex gap-4">
                     <div className="mb-4">
                         <label htmlFor="startDOB" className="block font-semibold text-gray-800 text-sm">Start Date of Birth</label>
@@ -102,7 +102,7 @@ const Users = () => {
                 {currentPosts.length > 0 ? (
                     <div>
                   
-                        <table className="min-w-full divide-y divide-gray-200 mt-5">
+                        <table className="min-w-full divide-y divide-gray-200 mt-3">
                             <thead className="bg-gray-50 ">
                                 <tr>
                                     <th scope="col" className="px-6 py-6 text-left whitespace-nowrap text-xs font-medium text-gray-500 uppercase tracking-wider">S/N</th>
