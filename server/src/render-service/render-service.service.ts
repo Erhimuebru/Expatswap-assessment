@@ -12,7 +12,6 @@ export class RenderService {
   async triggerEndpoint() {
     try {
       const response = await axios.get('https://expatswap-assessment.onrender.com/users/all');
-      console.log(response)
     } catch (error) {
       this.logger.error(`Error triggering endpoint: ${error.message}`);
     }

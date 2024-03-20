@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaPowerOff } from "react-icons/fa";
 import { NavLink, useLocation } from 'react-router-dom';
 import {  FaHome } from "react-icons/fa";
 import { HiMiniUserGroup } from "react-icons/hi2";
@@ -14,7 +13,7 @@ const Navbar = () => {
         
 <ul className="flex flex-grow gap-12 mt-2 items-center justify-center">
 
-<li>
+                    <li>
                         <NavLink to='/'     className={`items-center inline-block cursor-pointer ${
                              location.pathname === '/' ? 'text-blue-500 bg-[#f1f7fe] p-1 rounded-lg' : ''
                                         }`}>
@@ -25,10 +24,8 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     
-       {/* <Link to="/users">  <li className='font-bold text-xl'>Users</li></Link> */}
 
-
-       <li>
+                     <li>
                         <NavLink to='/users'     className={`items-center inline-block cursor-pointer ${
                              location.pathname === '/users' ? 'text-blue-500 bg-[#f1f7fe] p-1 rounded-lg' : ''
                                         }`}>
