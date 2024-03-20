@@ -266,7 +266,7 @@ const SignUp = () => {
         </h2>
         <ProgressBar step={step} />
         {errorMessage && (
-          <p className="text-red-500 text-sm mb-4">{errorMessage}</p>
+          <p className="text-red-500 text-xs mb-4">{errorMessage}</p>
         )}
         {step === 1 && (
           <div className="mt-5">
@@ -287,7 +287,7 @@ const SignUp = () => {
                 onChange={handlefirstNameChange}
               />
               {errors && errors.firstName && (
-                <p className="text-red-500">{errors.firstName}</p>
+                <p className="text-red-500 text-xs">{errors.firstName}</p>
               )}
             </div>
 
@@ -308,7 +308,7 @@ const SignUp = () => {
                 required
               />
               {errors && errors.lastName && (
-                <p className="text-red-500">{errors.lastName}</p>
+                <p className="text-red-500 text-xs">{errors.lastName}</p>
               )}
             </div>
 
@@ -346,7 +346,7 @@ const SignUp = () => {
             </div>
 
             {stepOneError && (
-              <div className="text-red-500 mt-2">{stepOneError}</div>
+              <div className="text-red-500 text-xs mt-2">{stepOneError}</div>
             )}
           </div>
         )}
@@ -369,7 +369,7 @@ const SignUp = () => {
                 required
               />
               {errors && errors.phoneNumber && (
-                <p className="text-red-500">{errors.phoneNumber}</p>
+                <p className="text-red-500 text-xs">{errors.phoneNumber}</p>
               )}
             </div>
 
@@ -389,7 +389,7 @@ const SignUp = () => {
                 required
               />
               {errors && errors.dob && (
-                <p className="text-red-500">{errors.dob}</p>
+                <p className="text-red-500 text-xs">{errors.dob}</p>
               )}
             </div>
 
@@ -409,7 +409,7 @@ const SignUp = () => {
             </div>
 
             {stepTwoError && (
-              <div className="text-red-500 mt-2">{stepTwoError}</div>
+              <div className="text-red-500 text-xs mt-2">{stepTwoError}</div>
             )}
           </div>
         )}
@@ -441,29 +441,29 @@ const SignUp = () => {
                 </button>
               </div>
               {passwordRequirements.lowercase ? (
-                <p className="text-green-500">✓ Contains lowercase letter</p>
+                <p className="text-green-500 text-xs">✓ Contains lowercase letter</p>
               ) : (
-                <p className="text-red-500">✘ Must contain lowercase letter</p>
+                <p className="text-red-500 text-xs">✘ Must contain lowercase letter</p>
               )}
               {passwordRequirements.uppercase ? (
-                <p className="text-green-500">✓ Contains uppercase letter</p>
+                <p className="text-green-500 text-xs">✓ Contains uppercase letter</p>
               ) : (
-                <p className="text-red-500">✘ Must contain uppercase letter</p>
+                <p className="text-red-500 text-xs">✘ Must contain uppercase letter</p>
               )}
               {passwordRequirements.number ? (
-                <p className="text-green-500">✓ Contains number</p>
+                <p className="text-green-500 text-xs">✓ Contains number</p>
               ) : (
-                <p className="text-red-500">✘ Must contain number</p>
+                <p className="text-red-500 text-xs">✘ Must contain number</p>
               )}
               {passwordRequirements.symbol ? (
-                <p className="text-green-500">✓ Contains symbol</p>
+                <p className="text-green-500 text-xs">✓ Contains symbol</p>
               ) : (
-                <p className="text-red-500">✘ Must contain symbol</p>
+                <p className="text-red-500 text-xs">✘ Must contain symbol</p>
               )}
               {passwordRequirements.length ? (
-                <p className="text-green-500">✓ Minimum 8 characters</p>
+                <p className="text-green-500 text-xs">✓ Minimum 8 characters</p>
               ) : (
-                <p className="text-red-500">✘ Must be at least 8 characters</p>
+                <p className="text-red-500 text-xs">✘ Must be at least 8 characters</p>
               )}
             </div>
 
@@ -493,7 +493,7 @@ const SignUp = () => {
                 </button>
               </div>
               {errors && errors.confirmPassword && (
-                <p className="text-red-500">{errors.confirmPassword}</p>
+                <p className="text-red-500 text-xs">{errors.confirmPassword}</p>
               )}
             </div>
 
