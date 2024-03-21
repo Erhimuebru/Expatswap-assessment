@@ -18,10 +18,9 @@ export class EmailVerificationService  {
     });
 
     let info = await transporter.sendMail({
-      from: '"Naija Update 🇳🇬 📖 " <' + process.env.EMAIL_USER + '>',
+      from: '"ExpatSwap 🇳🇬 📖 " <' + process.env.EMAIL_USER + '>',
       to: email,
-      cc: 'foodpadi343@gmail.com', 
-      subject: 'Naija Update Account Verification',
+      subject: 'ExpatSwap Account Verification',
       text: text,
       html: html,
     });

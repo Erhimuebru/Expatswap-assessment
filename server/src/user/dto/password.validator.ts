@@ -3,7 +3,6 @@ import { ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments 
 @ValidatorConstraint({ name: 'complexity', async: false })
 export class PasswordComplexityValidator implements ValidatorConstraintInterface {
   validate(password: string, args: ValidationArguments) {
-    // Strong regular expression for password complexity
     const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+{}\[\]:;<>,.?/~\\-]).{8,}$/;
     return passwordRegex.test(password);
   }

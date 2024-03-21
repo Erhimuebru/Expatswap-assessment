@@ -1,7 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { IsIn, IsNotEmpty, IsString } from 'class-validator';
 import mongoose, { Document, Schema as MongooseSchema } from 'mongoose';
-import { Role } from './create-user-dto';
 export type UserDocument = User & Document;
 
 @Schema()

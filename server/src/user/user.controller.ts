@@ -1,5 +1,5 @@
-import { Request, Controller,Get, Post, Body, BadRequestException, ConflictException, Logger, Param} from '@nestjs/common';
-import { CreateDto, Role } from './dto/create-user-dto'
+import { Controller,Get, Post, Body, BadRequestException, ConflictException, Logger, Param} from '@nestjs/common';
+import { CreateDto} from './dto/create-user-dto'
 import { UserService } from './user.service';
 import { User } from '../user/dto/user.schema';
 import * as bcrypt from 'bcryptjs';
@@ -7,14 +7,10 @@ import * as jwt from 'jsonwebtoken';
 
 
 
-
-
 @Controller('users')
 export class UserController {
   private readonly logger = new Logger(UserController.name);
-  
-
-  constructor(private readonly userService: UserService,
+    constructor(private readonly userService: UserService,
   
   ) {}
 
