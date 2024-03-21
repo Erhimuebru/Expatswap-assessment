@@ -25,8 +25,7 @@ export class EmailVerificationService  {
       html: html,
     });
   }
-
-  async sendConfirmationEmail(email: string, confirmationLink: string) {
+ async sendConfirmationEmail(email: string, confirmationLink: string) {
     const text = `Click the following link to verify your account: ${confirmationLink}`;
     const html = `Click the following link to verify your account: <a href="${confirmationLink}">${confirmationLink}</a>`;
 
